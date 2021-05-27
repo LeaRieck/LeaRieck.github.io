@@ -1,0 +1,12 @@
+{
+    "Levelname": "Level 1",
+    "gridSize": 50,
+    "Level": {
+        "row1": ["Weg", "Wand", "Wand", "Wand"],
+        "row2": ["Weg", "Wand", "Wand", "Wand"],
+        "row3": ["Weg", "Weg", "Weg", "Wand"],
+        "row4": ["Wand", "Wand", "Weg", "Wand"],
+        "row5": ["Wand", "Wand", "Weg", "Wand"],
+        "row6": ["Wand", "Wand", "Weg", "Wand"]
+    }
+}
