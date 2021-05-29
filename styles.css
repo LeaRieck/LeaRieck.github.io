@@ -35,7 +35,7 @@ html, body {
   width: 50px;
   height: 50px;
 
-  background-image: url("resources/Astronaut.png");
+  background-image: url("resources/assets/Astronaut.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center center;
@@ -43,5 +43,22 @@ html, body {
 }
 
 .wall {
-  background-color: blue;
+  background-image: url("resources/assets/wall.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.goal_unlocked {
+  background-image: url("resources/assets/ziel_open.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.goal_locked {
+  background-image: url("resources/assets/ziel_locked.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
 }

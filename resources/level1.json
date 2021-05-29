@@ -1,12 +1,12 @@
 {
     "Levelname": "Level 1",
-    "gridSize": 50,
+    "GoalLocked": false,
     "Level": {
-        "row1": ["Weg", "Wand", "Wand", "Wand"],
-        "row2": ["Weg", "Wand", "Wand", "Wand"],
-        "row3": ["Weg", "Weg", "Weg", "Wand"],
-        "row4": ["Wand", "Wand", "Weg", "Wand"],
-        "row5": ["Wand", "Wand", "Weg", "Wand"],
-        "row6": ["Wand", "Wand", "Weg", "Wand"]
+        "row1": ["Path", "Wall", "Wall", "Wall"],
+        "row2": ["Path", "Wall", "Wall", "Wall"],
+        "row3": ["Path", "Path", "Path", "Wall"],
+        "row4": ["Wall", "Wall", "Path", "Wall"],
+        "row5": ["Wall", "Wall", "Path", "Wall"],
+        "row6": ["Wall", "Wall", "Goal", "Wall"]
     }
 }
