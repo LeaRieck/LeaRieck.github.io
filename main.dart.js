@@ -3462,7 +3462,7 @@ $S:2}
 R.bS.prototype={
 Z:function(){var t=0,s=P.aj(u.z),r,q=this,p,o,n,m,l,k,j,i,h
 var $async$Z=P.al(function(a,b){if(a===1)return P.ag(b,s)
-while(true)switch(t){case 0:p=10/q.f,o=u.z,n=q.b,m=q.c/2,l=q.a,k=q.r
+while(true)switch(t){case 0:p=5/q.f,o=u.z,n=q.b,m=q.c/2,l=q.a,k=q.r
 case 3:if(!!0){t=4
 break}j={}
 j.a=j.b=0
