@@ -13,6 +13,9 @@
         "row9": ["Wall", "Wall", "Path", "Wall"],
         "row10": ["Wall", "Wall", "Path", "Wall"],
         "row11": ["Wall", "Wall", "Path", "Wall"],
-        "row12": ["Wall", "Wall", "Goal", "Wall"]
+        "row12": ["Wall", "Wall", "Path", "Wall"],
+        "row13": ["Wall", "Wall", "Path", "Wall"],
+        "row14": ["Wall", "Wall", "Path", "Wall"],
+        "row15": ["Wall", "Wall", "Goal", "Wall"]
     }
 }
