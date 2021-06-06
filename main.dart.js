@@ -3390,11 +3390,11 @@ q.d.z.r.k(0,"left",-1)
 q.d.z.r.k(0,"right",0)}if(o===1){q=r.a
 q.d.z.r.k(0,"left",0)
 q.d.z.r.k(0,"right",-1)}if(p===0){q=r.a
-q.d.z.r.k(0,"top",0)
+q.d.z.r.k(0,"up",0)
 q.d.z.r.k(0,"down",0)}if(p===-1){q=r.a
-q.d.z.r.k(0,"top",-1)
+q.d.z.r.k(0,"up",-1)
 q.d.z.r.k(0,"down",0)}if(p===1){q=r.a
-q.d.z.r.k(0,"top",0)
+q.d.z.r.k(0,"up",0)
 q.d.z.r.k(0,"down",-1)}}return P.ah(null,s)}})
 return P.ai($async$E,s)}}
 U.aZ.prototype={
@@ -3462,7 +3462,7 @@ $S:2}
 R.bS.prototype={
 Z:function(){var t=0,s=P.aj(u.z),r,q=this,p,o,n,m,l,k,j,i,h
 var $async$Z=P.al(function(a,b){if(a===1)return P.ag(b,s)
-while(true)switch(t){case 0:p=100/q.f,o=u.z,n=q.b,m=q.c/2,l=q.a,k=q.r
+while(true)switch(t){case 0:p=10/q.f,o=u.z,n=q.b,m=q.c/2,l=q.a,k=q.r
 case 3:if(!!0){t=4
 break}j={}
 j.a=j.b=0
