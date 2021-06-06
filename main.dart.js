@@ -1821,11 +1821,12 @@ cf:function cf(){},
 ci:function ci(){},
 cj:function cj(){}},B={cv:function cv(a,b){this.a=a
 this.b=b}},O={a6:function a6(){},ay:function ay(a){this.a=a
-this.b=null},d7:function d7(a,b){var _=this
+this.b=null},d7:function d7(a,b,c){var _=this
 _.a=null
 _.b=a
 _.c=b
-_.d=null}},A={Y:function Y(a){this.a=a
+_.d=c
+_.e=null}},A={Y:function Y(a){this.a=a
 this.b=null},cA:function cA(a){this.a=a}},G={cF:function cF(){this.d=null}},U={bF:function bF(a,b,c,d){var _=this
 _.d=a
 _.a=b
@@ -1861,7 +1862,7 @@ q.sbT(P.ea(p,u.c7))
 t=2
 return P.aL(q.O(),$async$dU)
 case 2:p=document
-r=new O.d7(p.querySelector("#player"),p.querySelector("#field"))
+r=new O.d7(p.querySelector("#player"),p.querySelector("#field"),p.querySelector("#camera"))
 r.bb(q)
 new B.cv(q,r).M()
 return P.ap(null,s)}})
@@ -3420,7 +3421,7 @@ n+=50}p+=50}for(t=q.ch,s=t.length,l=0;l<t.length;t.length===s||(0,H.er)(t),++l){
 r="#x"+H.e(r.a)+"-y"+H.e(r.b)
 m=document.querySelector(r)
 m.className="wall"}t="#x"+H.e(k.a.d.Q.b.a)+"-y"+H.e(k.a.d.Q.b.b)
-k.d=document.querySelector(t)},
+k.e=document.querySelector(t)},
 a_:function(){var t=0,s=P.ar(u.H),r,q=this,p,o,n,m,l,k,j,i,h,g
 var $async$a_=P.as(function(a,b){if(a===1)return P.ao(b,s)
 while(true)switch(t){case 0:h=q.a.d
@@ -3458,7 +3459,7 @@ break}l=H.e(-i+l/2)+"px"
 m.left=l
 h=h.style
 m=q.a.d.z
-m=H.e(-(m.b.b-m.c/2)+50)+"px"
+m=H.e(-(m.b.b-m.c/2))+"px"
 h.top=m
 if(k!==0||j!==0)if(Math.abs(k)>Math.abs(j))if(k>=0){h=g.style
 h.toString
@@ -3469,7 +3470,7 @@ h.toString
 C.c.F(h,C.c.E(h,"transform"),"rotate(180deg)","")}else{h=g.style
 h.toString
 C.c.F(h,C.c.E(h,"transform"),"rotate(0deg)","")}}h=H.P(q.a.d.Q.d)
-g=q.d
+g=q.e
 if(h)g.className="goal_locked"
 else g.className="goal_unlocked"
 case 1:return P.ap(r,s)}})
