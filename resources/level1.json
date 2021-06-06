@@ -2,11 +2,17 @@
     "Levelname": "Level 1",
     "GoalLocked": false,
     "Level": {
-        "row1": ["Path", "Wall", "Wall", "Wall"],
+        "row1": ["Start", "Wall", "Wall", "Wall"],
         "row2": ["Path", "Wall", "Wall", "Wall"],
         "row3": ["Path", "Path", "Path", "Wall"],
         "row4": ["Wall", "Wall", "Path", "Wall"],
         "row5": ["Wall", "Wall", "Path", "Wall"],
-        "row6": ["Wall", "Wall", "Goal", "Wall"]
+        "row6": ["Wall", "Wall", "Path", "Wall"],
+        "row7": ["Wall", "Wall", "Path", "Wall"],
+        "row8": ["Wall", "Wall", "Path", "Wall"],
+        "row9": ["Wall", "Wall", "Path", "Wall"],
+        "row10": ["Wall", "Wall", "Path", "Wall"],
+        "row11": ["Wall", "Wall", "Path", "Wall"],
+        "row12": ["Wall", "Wall", "Goal", "Wall"]
     }
 }

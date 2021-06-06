@@ -28,7 +28,17 @@ html, body {
   display: grid;
   grid-template-rows: repeat(auto-fit, 50px);
   grid-template-columns: repeat(auto-fit, 50px);
+}
+
+#camera {
+  width: 50%;
+  height: 50%;
   overflow: hidden;
+
+  border: 2px solid black;
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
 }
 
 .astronaut {
