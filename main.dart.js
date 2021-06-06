@@ -3453,8 +3453,7 @@ m=i.style
 l=H.e(-q.a.d.z.b.a)+"px"
 m.left=l
 i=i.style
-m=q.a.d.z
-m=H.e(-(m.b.b-m.c/2))+"px"
+m=H.e(-q.a.d.z.b.b)+"px"
 i.top=m
 if(k!==0||j!==0)if(Math.abs(k)>Math.abs(j))if(k>=0){i=h.style
 i.toString
