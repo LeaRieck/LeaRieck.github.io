@@ -3935,10 +3935,10 @@ O.aW.prototype={
 K:function(a){var s=0,r=P.V(t.z),q=this,p,o,n
 var $async$K=P.W(function(b,c){if(b===1)return P.S(c,r)
 while(true)switch(s){case 0:if(t.C.b(a))if(a.alpha!=null&&a.beta!=null&&a.gamma!=null){p=a.beta
-if(Math.min(50,Math.max(10,H.ey(p)))-50<=0)o=Math.min(50,Math.max(10,H.ey(p)))-50===0?0:-1
+if(Math.min(50,Math.max(10,H.ey(p)))-40<=0)o=Math.min(50,Math.max(10,H.ey(p)))-40===0?0:-1
 else o=1
 p=a.gamma
-if(Math.min(50,Math.max(-50,H.ey(p)))<=0)n=Math.min(50,Math.max(-50,H.ey(p)))===0?0:-1
+if(Math.min(20,Math.max(-10,H.ey(p)))<=0)n=Math.min(20,Math.max(-10,H.ey(p)))===0?0:-1
 else n=1
 if(n===0){p=q.a
 p.d.z.y.n(0,"left",0)
