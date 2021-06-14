@@ -13,12 +13,34 @@
 </head>
 
 <body>
-  <div id="camera">
-    <div id="field">
-      <div id="player" class="astronaut"></div>
+  <div id="background" class="background">
+    <div id="startMenu" class="menu"></div>
+
+    <div id="levelOverview" class="menu"></div>
+    <div id="camera" class = "camera">
+      <div id="levelBackground "class="gridfield levelBackground">
+      </div>
+      <div id="field" class="gridfield">
+        <div id="player" class="astronaut"></div>
+      </div>
+      <div id="viewfield" class="gridfield"></div>
+
     </div>
   </div>
 
+  <script type="text/javascript">
+      function requestOrientationPermission(){
+          DeviceOrientationEvent.requestPermission()
+              .then(response => {
+                  if (response == 'granted') {
+                      window.addEventListener('deviceorientation', (e) => {
 
+                      })
+                  }
+              })
+              .catch(console.error)
+      }
+  </script>
+  <button id = "iosButton" onclick='requestOrientationPermission();'>Request orientation permission</button>
 </body>
 </html>
