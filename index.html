@@ -14,7 +14,9 @@
 
 <body>
   <div id="background" class="background">
-    <div id="startMenu" class="menu"></div>
+    <div id="startMenu" class="menu">
+      <button id="PlayButton" class="menuButton" onclick='requestOrientationPermission();'>PLAY</button>
+    </div>
 
     <div id="levelOverview" class="menu"></div>
     <div id="camera" class = "camera">
@@ -25,6 +27,12 @@
       </div>
       <div id="viewfield" class="gridfield"></div>
 
+    </div>
+    <div id="finished">
+      <p id="finishedText" class="lineBreak"></p>
+      <button id="Again" class="menuButton">Nochmal Spielen</button>
+        <button id="Next" class="menuButton">Nächstes Level</button>
+      <button id="backToMenuButton" class="menuButton">MENÜ</button>
     </div>
   </div>
 
@@ -41,6 +49,6 @@
               .catch(console.error)
       }
   </script>
-  <button id = "iosButton" onclick='requestOrientationPermission();'>Request orientation permission</button>
+
 </body>
 </html>
