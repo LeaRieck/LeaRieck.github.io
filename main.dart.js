@@ -3958,25 +3958,25 @@ case 4:case 1:return P.y(q,r)}})
 return P.z($async$$1,r)},
 $S:2}
 O.E.prototype={
-a4:function(a){var s,r,q=a.b,p=q.a,o=this.b,n=o.a
-if(typeof p!=="number")return p.w()
-if(typeof n!=="number")return H.aq(n)
-s=p-n
-q=q.b
-o=o.b
-if(typeof q!=="number")return q.w()
-if(typeof o!=="number")return H.aq(o)
-r=q-o
-q=Math.abs(s)
-p=this.c/2
-o=a.c/2
-n=p+o
-if(!(q>n)&&!(Math.abs(r)>n)){if(q<=p&&Math.abs(r)<=n)if(r>0)return"b"
+a4:function(a){var s,r,q,p,o,n=a.b,m=n.a,l=this.b,k=l.a
+if(typeof m!=="number")return m.w()
+if(typeof k!=="number")return H.aq(k)
+s=m-k
+n=n.b
+l=l.b
+if(typeof n!=="number")return n.w()
+if(typeof l!=="number")return H.aq(l)
+r=n-l
+l=this.c/2
+n=a.c/2
+q=l+n
+p=Math.abs(s)
+o=Math.abs(r)
+if(!(p>q)&&!(o>q)){if(p<=l&&o<=q)if(r>0)return"b"
 else return"t"
-if(q<=n&&Math.abs(r)<=p)if(s>0)return"r"
+if(p<=q&&o<=l)if(s>0)return"r"
 else return"l"
-n=Math.abs(r)
-if(Math.pow(q-p,2)+Math.pow(n-p,2)<=Math.pow(o,2))if(q>n)if(s>0)return"r"
+if(Math.pow(p-l,2)+Math.pow(o-l,2)<=Math.pow(n,2))if(p>o)if(s>0)return"r"
 else return"l"
 else if(r>0)return"b"
 else return"t"}return"none"}}
