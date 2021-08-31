@@ -1,13 +1,13 @@
 {
     "Levelname": "Level 1",
     "Level": [
-        ["Wall","Wall", "Wall", "Wall", "Wall","Wall","Wall"],
+        ["Wall","Wall", "LF-b", "Wall", "Wall","Wall","Wall"],
         ["Wall","Path", "Path", "Path", "Path","Path","Wall"],
         ["Wall","Path", "Path", "Path", "Path","Path","Wall"],
         ["Wall","Path", "Path", "Path", "Path","Path","Wall"],
         ["Wall","Path", "Path", "Path", "Path","Path","Wall"],
         ["Wall","Path", "Path", "Start", "Path","Path","Wall"],
-        ["Wall","Path", "Abyss", "Path", "Path","Path","Wall"],
+        ["Wall","Path", "Abyss", "Air-l-1", "Air-l-1","Air-l-1","Airvent-l"],
         ["Wall","Path", "Wall", "Path", "Path","Path","Wall"],
         ["Wall","Path", "Wall", "Path", "Path","Path","Wall"],
         ["Wall","Path", "Wall", "Path", "Path","Path","Wall"],
@@ -18,6 +18,21 @@
         ["Wall","Wall", "Wall", "Goal", "Wall","Wall","Wall"]
     ],
     "Collectibles": {
-        "Key":[{"x":1.5,"y":2.7}]
+        "Key":[{"x":1.5,"y":2.7}],
+        "Life":[{"x":3.5,"y":2.7},{"x":5.5,"y":2.7}],
+        "Invert":[{"x":4.5,"y":6.7,"duration":10000},{"x":2.5,"y":2.7,"duration":10000}],
+        "Speed":[{"x": 4.5,"y":11.5,"duration":10000,"multiplier":5}],
+        "Visibility":[{"x": 3.5,"y":9.5,"duration":10000, "difference":2}]
+    },
+    "Traps": {
+        "Lasergate": [{"x": 1.0, "y":6.0, "endx": 2.0, "endy": 6.0, "on":2000, "off": 3000} ]
+    },
+    "Monster":{
+        "Runner":[
+            [{"x":5.0, "y":2.0},{"x":5.0, "y":8.0}]
+        ],
+        "Patroler":[
+            [{"x":3.5, "y":3.5},{"x":5.5,"y":5.5},{"x":3.5,"y":7.5},{"x":1.5,"y":5.5},{"x":3.5, "y":3.5}]
+        ]
     }
 }

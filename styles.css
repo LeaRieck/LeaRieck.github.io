@@ -17,59 +17,86 @@ html, body {
 
 #level {
     display: none;
-    background-image: url("resources/background/background.png");
-    background-repeat: no-repeat;
+    flex-direction: column;
 }
 
-#camera {
-    display: none;
-    width: 50%;
-    height: 50%;
+.camera {
     overflow: hidden;
-    position: relative;
-    margin: auto;
-    margin-top: 10%;
-    border: 2px solid black;
     background-color: black;
+    margin: 0 auto auto;
     justify-items: center;
-    align-items: center;
+    display: block;
+
+    position: relative;
+
 }
 
-#viewfield {
-    z-index: 5;
-}
-
-.gridfield {
-    position: absolute;
-    display: grid;
-}
-
-#background {
+.background {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-
     background-image: url("resources/background/background.png");
     background-repeat: no-repeat;
 }
 
-#levelOverview {
-    display: none;
+.gridfield {
+    display: grid;
+    position: absolute;
 }
 
-.levelBackground {
-    background-image: url("resources/background/background.png");
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+.buttonStyle {
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #414141;
+    color: white;
+    border: none;
+    margin: 5px;
+    border-radius: 28px;
+    height: 2em;
+    cursor: pointer;
+}
+  
+.menuButtonWidth {
+    width: 20%;
+    min-width: 200px;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.repeat {
     background-repeat: repeat;
 }
 
-.astronaut {
-    width: 50px;
-    height: 50px;
+.gridentity {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    background-color: white;
+}
 
+.astronaut {
     background-image: url("resources/assets/Astronaut.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -108,44 +135,133 @@ html, body {
     background-color: white;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  height: 100%;
-  width: 100%;
+.life {
+    background-image: url("resources/assets/extralife.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    position: absolute;
+}
+
+.lives {
+    background-image: url("resources/assets/extralife.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    margin: 0 5px;
+    height: 50px;
+    width: 50px;
+    position: relative;
 }
 
 .key {
-  background-image: url("resources/assets/Key.svg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center center;
-
-  position: absolute;
+    background-image: url("resources/assets/Key.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    position: absolute;
 }
 
-.menuButton {
-  font-size: 23px;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #414141;
-  color: white;
-  border: none;
-  border-radius: 28px;
-  gap:20px;
-  padding: 0 2px 0 2px;
-  width: 20%;
-  min-width: 106px;
-  height: 2em;
+.invert {
+    background-image: url("resources/assets/Invert_Control.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    position: absolute;
+}
+
+.speed {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+}
+
+.visibility {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+}
+
+.runner {
+    background-image: url("resources/assets/monster_runner.svg");
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    position: absolute;
+}
+
+.patroler {
+    background-image: url("resources/assets/monster_patroler.svg");
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    position: absolute;
+}
+
+.speedUp {
+    background-image: url("resources/assets/fast.svg");
+}
+
+.speedDown {
+    background-image: url("resources/assets/slow.svg");
+}
+
+.visibilityUp {
+    background-image: url("resources/assets/bigger_viewfield.svg");
+}
+
+.visibilityDown {
+    background-image: url("resources/assets/smaller_viewfield.svg");
+}
+
+.lasergateHorizontal {
+    background-image: url("resources/assets/Lasergate_Horizontal.png");
+}
+
+.lasergateVertical {
+    background-image: url("resources/assets/Lasergate_Vertical.png");
+}
+
+.width20 {
+    width: 20%;
+}
+
+.minWidth200 {
+    min-width: 200px;
+}
+
+.leveltext {
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    color: white;
+    margin: 0;
+}
+
+.timetext {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 #finished button {
-  width: 95% !important;
+    width: 95% !important;
+}
+
+#pauseMenu button {
+    width: 95% !important;
+    min-width: 240px;
 }
 
 .viewblock {
@@ -163,6 +279,7 @@ html, body {
     animation-duration: 0.8s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 .halffadeout {
@@ -170,6 +287,7 @@ html, body {
     animation-duration: 0.8s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 
@@ -177,7 +295,8 @@ html, body {
     animation-name: fadetoblack;
     animation-duration: 0.8s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 @keyframes fadetotransparent {
@@ -207,17 +326,6 @@ html, body {
     }
 }
 
-#iosButton {
-    display: none;
-    font-size: 23px;
-    text-transform: uppercase;
-    background-color: #000000;
-    color: white;
-    border: none;
-    padding: 0 2px 0 2px;
-
-}
-
 #finished {
     display: none;
     z-index: 6;
@@ -226,12 +334,373 @@ html, body {
     margin: auto;
     flex-direction: column;
     flex-wrap: wrap;
+    position: absolute;
+    padding: 5px;
+    gap: 10px;
+    min-width: 250px;
     max-width: 50%;
+}
+
+#pauseMenu {
+    display: none;
+    z-index: 6;
+    background-color: white;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: absolute;
     padding: 5px;
     gap: 10px;
 }
 
+.overlay {
+    width: 50%;
+    margin: auto auto 0;
+}
+
+.fixedOverlay {
+    display: inline-grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    background-color: white;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+    width: 100%;
+}
+
+.fixedOverlay > div {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    font-size: 23px;
+    height: 55px;
+    align-items: center;
+}
+
+.fontSize23 {
+    font-size: 23px;
+}
+
+.powerUpOverlay {
+    display: flex;
+    z-index: 6;
+    width: 70%;
+    position: absolute;
+}
+
+#powerUps > img {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+
 .lineBreak {
     white-space: pre-line;
+}
+
+.level {
+    width: 100%;
+    height: 100%;
+}
+
+.numberPos{
+    bottom: 0;
+    left: 0;
+    position: absolute;   
+}
+
+.editorOverview {
+    max-width: 60%;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+
+.editorInput {
+    width: 60px;
+    height: 35px;
+    border-radius: 10%;
+    border: 0;
+}
+
+
+.monsterText {
+    color: white;
+    text-shadow: 0 0 8px black;
+    font-size: x-large;
+    font-weight: 900;
+    cursor: default;
+}
+
+.recycling {
+    background-image: url("resources/assets/delete.svg");;
+}
+
+.blackHalfOpacity {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.editorInfo {
+    font-size: 15px;
+    max-width: 300px;
+    max-height: 50px;
+}
+
+.customOutBox {
+    left: 10px;
+    top: 5px;
+    width: calc(30% - 10px);
+    height: 50%;
+}
+
+.top100 {
+    top: 100%;
+}
+
+.borderGrey {
+    border: 1px solid #414141;
+}
+
+.borderBlack {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.borderRad {
+    border-radius: 28px;
+}
+
+.borderBotNoRad {
+    border-top-right-radius: 28px;
+    border-top-left-radius: 28px;
+}
+
+.borderTopNoRad {
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+}
+
+.borderBox {
+    box-sizing: border-box;
+}
+
+.elementStyle {
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    height: 2em;
+}
+
+.imageOption {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.initial {
+    position: initial;
+}
+
+.absolut {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.zindex5 {
+    z-index: 5;
+}
+
+.text {
+    font-size: 20px;
+    padding: 0 2px 0 2px;
+    color: lightgrey;
+}
+
+.scrollable {
+    overflow: auto;
+}
+
+.paddingBot5 {
+    padding-bottom: 5px;
+}
+
+.marginLeftAuto {
+    margin-left: auto;
+}
+
+.marginRightAuto {
+    margin-right: auto;
+}
+
+.marginTopAuto {
+    margin-top: auto;
+}
+
+.marginBotAuto {
+    margin-bottom: auto;
+}
+
+.margin5 {
+    margin: 5px;
+}
+
+
+.marginTop5 {
+    margin-top: 5px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+
+.marginTop0 {
+    margin-top: 0;
+}
+
+.marginBot0 {
+    margin-bottom: 0;
+}
+
+.marginBot5 {
+    margin-bottom: 5px;
+}
+
+.marginLeft5 {
+    margin-left: 5px;
+}
+
+.marginRight5 {
+    margin-right: 5px;
+}
+
+.backgroundLightgrey {
+    background-color: lightgrey;
+}
+
+.backgroundGrey {
+    background-color: #414141;;
+}
+
+.backgroundGreen {
+    background-color: #00854a;
+}
+
+.backgroundLightgreen {
+    background-color: #99ceb7;
+}
+
+.sizeMax {
+    width: 100%;
+    height: 100%;
+}
+
+.maxHeight350 {
+    max-height: 350px;
+}
+
+.minHeight320 {
+    min-height: 320px;
+}
+
+.height360px {
+    height: 360px;
+}
+
+.heigh4EM {
+    height: 4em;
+}
+
+.maxWidth240 {
+    max-width: 240px;
+}
+
+.maxWidth700 {
+    max-width: 700px;
+}
+
+.minWidth380 {
+    min-width: 380px;
+}
+
+.widthCalc50 {
+    width: calc(50% - 15px);
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width240 {
+    width: 240px;
+}
+
+.size50 {
+    width: 50px;
+    height: 50px;
+}
+
+.size40 {
+    width: 40px;
+    height: 40px;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.alignCenter {
+    place-content: center;
+    align-items: center;
+}
+
+.selfCenter {
+    place-self: center;
+}
+
+.verticalCenter {
+    align-self: center;
+}
+
+.justifyEnd {
+    justify-self: end;
+}
+
+.block {
+    display: block;
+}
+
+.flexCol {
+    flex-direction: column;
+}
+
+.flexRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hidden {
+    display: none;
 }
