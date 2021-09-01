@@ -15,11 +15,6 @@ html, body {
     text-align: center;
 }
 
-#level {
-    display: none;
-    flex-direction: column;
-}
-
 .camera {
     overflow: hidden;
     background-color: black;
@@ -326,33 +321,6 @@ html, body {
     }
 }
 
-#finished {
-    display: none;
-    z-index: 6;
-    background-color: white;
-    align-items: center;
-    margin: auto;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: absolute;
-    padding: 5px;
-    gap: 10px;
-    min-width: 250px;
-    max-width: 50%;
-}
-
-#pauseMenu {
-    display: none;
-    z-index: 6;
-    background-color: white;
-    align-items: center;
-    margin: auto;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: absolute;
-    padding: 5px;
-    gap: 10px;
-}
 
 .overlay {
     width: 50%;
@@ -590,10 +558,12 @@ html, body {
 
 .backgroundGreen {
     background-color: #00854a;
+    position: absolute;
 }
 
 .backgroundLightgreen {
     background-color: #99ceb7;
+    position: absolute;
 }
 
 .sizeMax {
