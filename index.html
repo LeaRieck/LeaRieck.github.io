@@ -20,22 +20,23 @@
       <button id="LevelEditorButton" class="buttonStyle menuButtonWidth hidden">LEVELEDITOR</button>
     </div>
 
-    <div id="levelEditorBox" class="block scrollable sizeMax hidden">
-      <div id='editorOverview' class="flex flexCol alignCenter sizeMax editorOverview">
-        <div id="overviewSection" class="flex flexRow alignCenter width100">
-          <button id="editorBack" class="elementStyle fontSize23 borderRad textCenter minWidth200 width20 backgroundGrey marginLeftAuto marginRight5 backToMenu pointer">Menu</button>
-          <button id="newLevel" class="elementStyle fontSize23 borderRad textCenter minWidth200 width20 backgroundGrey marginRightAuto marginLeft5 pointer">new Level</button>
+    <div id="levelEditorBox" class="scrollBox hidden">
+      <div id='editorOverview' class="menu">
+        <div id="overviewSection" class="editorSection">
+          <button id="editorBack" class="buttonStyle menuButtonWidth backToMenu">Menu</button>
+          <button id="newLevel" class="buttonStyle menuButtonWidth">new Level</button>
         </div>
-        <div id="customlevelbox" class="flex flexCol alignCenter editorOverview"></div>
-        <div id="customLevelOutbox" class="flex customOutBox absolut flexCol alignCenter hidden">
-          <pre id="customOut" class="backgroundLightgrey sizeMax scrollable"></pre>
-          <button id="customCopy" class="elementStyle fontSize23 backgroundGrey borderRad width240 pointer">Copy JSON</button>
+        <div id="customlevelbox" class="menu"></div>
+        <div id="customLevelOutbox" class="customOutBox hidden">
+          <pre id="customOut" class="customOut"></pre>
+          <button id="customCopy" class="buttonStyle menuButtonWidth">Copy JSON</button>
         </div>
       </div>
-      <div id="levelEditor" class="block scrollable sizeMax hidden"></div>
+      <div id="levelEditor" class="levelEditor hidden"></div>
     </div>
-    <div id="levelOverview" class="menu hidden"></div>
-
+    <div id="levelOverviewBox" class="scrollBox hidden">
+    <div id="levelOverview" class="menu "></div>
+    </div>
     <div id="level" class="level hidden">
       <div id="levelOverlay" class="overlay">
         <div class="fixedOverlay">
@@ -71,18 +72,18 @@
       </div>
     </div>
 
-    <div id="pauseMenu">
-      <p class="lineBreak">Spiel pausiert</p>
-      <button id="Continue" class="buttonStyle menuButtonWidth">Weiterspielen</button>
-      <button id="LevelOverviewButton" class="buttonStyle menuButtonWidth">Levelauswahl</button>
-      <button id="BackToMenuButton2" class="backToMenu buttonStyle menuButtonWidth">Menü</button>
+    <div id="pauseMenu" class="popupMenu hidden">
+      <p class="lineBreak">Paused</p>
+      <button id="Continue" class="buttonStyle menuButtonWidth">Continue</button>
+      <button id="LevelOverviewButton" class="buttonStyle menuButtonWidth">Levelselection</button>
+      <button id="BackToMenuButton2" class="backToMenu buttonStyle menuButtonWidth">Menu</button>
     </div>
 
-    <div id="finished">
+    <div id="finished" class="popupMenu hidden">
       <p id="finishedText" class="lineBreak"></p>
-      <button id="Again" class="buttonStyle menuButtonWidth">Nochmal Spielen</button>
-      <button id="Next" class="buttonStyle menuButtonWidth">Nächstes Level</button>
-      <button id="backToMenuButton" class="buttonStyle menuButtonWidth backToMenu">MENÜ</button>
+      <button id="Again" class="buttonStyle menuButtonWidth">Play again</button>
+      <button id="Next" class="buttonStyle menuButtonWidth">Next level</button>
+      <button id="backToMenuButton" class="buttonStyle menuButtonWidth backToMenu">Menu</button>
     </div>
   </div>
 

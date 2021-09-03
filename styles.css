@@ -10,18 +10,12 @@ html, body {
 
 }
 
-#output {
-    padding: 20px;
-    text-align: center;
-}
-
 .camera {
     overflow: hidden;
     background-color: black;
     margin: 0 auto auto;
     justify-items: center;
     display: block;
-
     position: relative;
 
 }
@@ -44,13 +38,13 @@ html, body {
 }
 
 .menu {
+    align-self: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
     width: 100%;
+    margin: auto;
   }
 
 .buttonStyle {
@@ -62,7 +56,7 @@ html, body {
     border: none;
     margin: 5px;
     border-radius: 28px;
-    height: 2em;
+    min-height: 2em;
     cursor: pointer;
 }
   
@@ -77,8 +71,6 @@ html, body {
     width: 100%;
     height: 100%;
 }
-
-
 
 .repeat {
     background-repeat: repeat;
@@ -197,36 +189,20 @@ html, body {
     position: absolute;
 }
 
-.speedUp {
-    background-image: url("resources/assets/fast.svg");
-}
-
-.speedDown {
-    background-image: url("resources/assets/slow.svg");
-}
-
-.visibilityUp {
-    background-image: url("resources/assets/bigger_viewfield.svg");
-}
-
-.visibilityDown {
-    background-image: url("resources/assets/smaller_viewfield.svg");
-}
-
 .lasergateHorizontal {
     background-image: url("resources/assets/Lasergate_Horizontal.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: absolute;
 }
 
 .lasergateVertical {
     background-image: url("resources/assets/Lasergate_Vertical.png");
-}
-
-.width20 {
-    width: 20%;
-}
-
-.minWidth200 {
-    min-width: 200px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: absolute;
 }
 
 .leveltext {
@@ -246,17 +222,12 @@ html, body {
     margin: 0;
 }
 
-.pointer {
-    cursor: pointer;
-}
-
 #finished button {
     width: 95% !important;
 }
 
 #pauseMenu button {
     width: 95% !important;
-    min-width: 240px;
 }
 
 .viewblock {
@@ -321,6 +292,19 @@ html, body {
     }
 }
 
+.popupMenu {
+    display: flex;
+    z-index: 6;
+    background-color: white;
+    align-items: center;
+    margin: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    min-width: 250px;
+    max-width: 50%;
+    padding-bottom: 5px;
+}
 
 .overlay {
     width: 50%;
@@ -346,10 +330,6 @@ html, body {
     align-items: center;
 }
 
-.fontSize23 {
-    font-size: 23px;
-}
-
 .powerUpOverlay {
     display: flex;
     z-index: 6;
@@ -367,15 +347,28 @@ html, body {
     white-space: pre-line;
 }
 
-.level {
-    width: 100%;
-    height: 100%;
-}
-
 .numberPos{
     bottom: 0;
     left: 0;
     position: absolute;   
+}
+
+.scrollBox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+
+#customlevelbox > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 260px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .editorOverview {
@@ -384,82 +377,235 @@ html, body {
     gap: 15px;
 }
 
+.customJsonLabel{
+    cursor: pointer;
+}
+
+.customOutBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: calc(30% - 30px);
+    height: 50%;
+}
+
+.customOut {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.levelEditor{
+    display:flex;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.editorSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin: 5px;
+}
+
+.editorSetting{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sectionLeft{
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.sectionRight{
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+#settings > div{
+        width: 250px;
+}
+
+#settingsGrid > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+}
 
 .editorInput {
+    text-align: center;
     width: 60px;
     height: 35px;
     border-radius: 10%;
     border: 0;
+    margin-left: 5px;
 }
 
+.editorBox{
+    display: grid;
+    width: calc(50% - 20px);
+    max-height: 350px;
+    margin: 0 5px 0 10px;
+    overflow: auto;
+}
+
+.editorGrid{
+    display: grid;
+    justify-self: end;
+}
+
+.pathGrid{
+    width: 50px;
+    height: 50px;
+    border: 1px solid#414141;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.sidebarBox{
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 20px);
+    min-height: 340px;
+    margin: 5px auto 5px 5px;
+}
+
+.flexBox{
+    display: flex;
+    margin:5px;
+    width:100%;
+}
+
+#selectedAndRemove > div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.editorInfo {
+    font-size: 14px;
+    max-width: 300px;
+    max-height: 50px;
+    background-color: lightgrey;
+    margin: 0 5px;
+    overflow: auto;
+}
+
+.placeableItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.editorItem{
+    width: 50px;
+    min-height: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.editorAbyss {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.dropdownBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.dropdown{
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: #414141;
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #414141;
+    border-bottom-left-radius: 28px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 28px;
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+}
+
+.lasergateSetting{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+#traps{
+    height: 105px;
+}
+
+.powerupSetting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.monsterSubmitWidth{
+    width: 40%;
+    height: 2em;
+}
+
+.monsterBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    width: 200px;
+    margin: 5px;
+}
 
 .monsterText {
     color: white;
+    text-align: center;
     text-shadow: 0 0 8px black;
     font-size: x-large;
     font-weight: 900;
     cursor: default;
 }
 
-.recycling {
-    background-image: url("resources/assets/delete.svg");;
-}
-
-.blackHalfOpacity {
-    background-color: black;
-    opacity: 0.5;
-}
-
-.editorInfo {
-    font-size: 15px;
-    max-width: 300px;
-    max-height: 50px;
-}
-
-.customOutBox {
-    left: 10px;
-    top: 5px;
-    width: calc(30% - 10px);
-    height: 50%;
-}
-
-.top100 {
-    top: 100%;
-}
-
-.borderGrey {
-    border: 1px solid #414141;
-}
-
-.borderBlack {
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-}
-
-.borderRad {
-    border-radius: 28px;
+.editorOut {
+    width: 250px;
+    max-height: 350px;
+    position: absolute;
+    background-color: lightgrey;
+    overflow: auto;
 }
 
 .borderBotNoRad {
-    border-top-right-radius: 28px;
-    border-top-left-radius: 28px;
-}
-
-.borderTopNoRad {
-    border-bottom-right-radius: 28px;
-    border-bottom-left-radius: 28px;
-}
-
-.borderBox {
-    box-sizing: border-box;
-}
-
-.elementStyle {
-    text-transform: uppercase;
-    color: white;
-    border: none;
-    height: 2em;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .imageOption {
@@ -468,16 +614,8 @@ html, body {
     background-position: center center;
 }
 
-.initial {
-    position: initial;
-}
-
 .absolut {
     position: absolute;
-}
-
-.relative {
-    position: relative;
 }
 
 .zindex5 {
@@ -487,136 +625,17 @@ html, body {
 .text {
     font-size: 20px;
     padding: 0 2px 0 2px;
-    color: lightgrey;
-}
-
-.scrollable {
-    overflow: auto;
-}
-
-.paddingBot5 {
-    padding-bottom: 5px;
-}
-
-.marginLeftAuto {
-    margin-left: auto;
-}
-
-.marginRightAuto {
-    margin-right: auto;
-}
-
-.marginTopAuto {
-    margin-top: auto;
-}
-
-.marginBotAuto {
-    margin-bottom: auto;
-}
-
-.margin5 {
+    color: white;
     margin: 5px;
 }
 
 
-.marginTop5 {
-    margin-top: 5px;
-}
-
-.marginTop10 {
-    margin-top: 10px;
-}
-
-
-.marginTop0 {
-    margin-top: 0;
-}
-
-.marginBot0 {
-    margin-bottom: 0;
-}
-
-.marginBot5 {
-    margin-bottom: 5px;
-}
-
-.marginLeft5 {
-    margin-left: 5px;
-}
-
-.marginRight5 {
-    margin-right: 5px;
-}
-
-.backgroundLightgrey {
-    background-color: lightgrey;
-}
-
-.backgroundGrey {
-    background-color: #414141;;
-}
-
 .backgroundGreen {
     background-color: #00854a;
-    position: absolute;
 }
 
 .backgroundLightgreen {
     background-color: #99ceb7;
-    position: absolute;
-}
-
-.sizeMax {
-    width: 100%;
-    height: 100%;
-}
-
-.maxHeight350 {
-    max-height: 350px;
-}
-
-.minHeight320 {
-    min-height: 320px;
-}
-
-.height360px {
-    height: 360px;
-}
-
-.heigh4EM {
-    height: 4em;
-}
-
-.maxWidth240 {
-    max-width: 240px;
-}
-
-.maxWidth700 {
-    max-width: 700px;
-}
-
-.minWidth380 {
-    min-width: 380px;
-}
-
-.widthCalc50 {
-    width: calc(50% - 15px);
-}
-
-.width100 {
-    width: 100%;
-}
-
-.width80 {
-    width: 80%;
-}
-
-.width50 {
-    width: 50%;
-}
-
-.width240 {
-    width: 240px;
 }
 
 .size50 {
@@ -629,46 +648,9 @@ html, body {
     height: 40px;
 }
 
-.grid {
-    display: grid;
-}
-
-.flex {
-    display: flex;
-}
-
-.textCenter {
-    text-align: center;
-}
-
 .alignCenter {
-    place-content: center;
+    justify-content: center;
     align-items: center;
-}
-
-.selfCenter {
-    place-self: center;
-}
-
-.verticalCenter {
-    align-self: center;
-}
-
-.justifyEnd {
-    justify-self: end;
-}
-
-.block {
-    display: block;
-}
-
-.flexCol {
-    flex-direction: column;
-}
-
-.flexRow {
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .hidden {

@@ -1,224 +1,218 @@
-<div id="backgroundEditor" class="flex flexCol sizeMax alignCenter">
-    <div id="settings" class="flex flexRow alignCenter width100">
-        <form id="settingsGrid"
-            class="flex flexCol alignCenter width100 maxWidth240 marginTop5 marginBot5 marginLeftAuto marginRight5">
-            <label id="columnsLabel" for="columns"
-                class="flex flexRow maxWidth240 marginLeft5 marginRight5 width100 alignCenter marginTop5 marginBot5 elementStyle fontSize23 backgroundGrey borderRad">
-                Columns:
-                <input id="columns" class="editorInput textCenter marginLeft5" type="number" min="5" max="20" step="1" value="5">
-            </label>
+<div id="backgroundEditor" class="menu">
+    <div id="settings" class="editorSection">
+        <div id="settingsGrid" class="editorSetting sectionLeft">
+            <div id="columnBox" class="buttonStyle">
+                <label id="columnsLabel" for="columns">
+                    Columns:
+                </label>
+                <input id="columns" class="editorInput" type="number" min="5" max="20" step="1" value="5">
+            </div>
+            <div id="rowBox" class="buttonStyle">
+                <label id="rowsLabel" for="rows">
+                    Rows:
+                </label>
+                <input id="rows" class="editorInput" type="number" min="5" max="20" step="1" value="5">
+            </div>
 
-            <label id="rowsLabel" for="rows"
-                class="flex flexRow maxWidth240 marginLeft5 marginRight5 width100 alignCenter marginTop5 marginBot5 elementStyle fontSize23 backgroundGrey borderRad">
-                Rows:
-                <input id="rows" class="editorInput textCenter marginLeft5" type="number" min="5" max="20" step="1" value="5">
-            </label>
-        </form>
-        <div id="settingbuttons"
-            class="flex flexCol alignCenter width100 maxWidth240 marginTop5 marginBot5 marginRightAuto marginLeft5">
-            <button id="generateLevel"
-                class="elementStyle fontSize23 backgroundGrey borderRad marginLeft5 marginRight5 width100 maxWidth240 marginTop5 marginBot5 pointer">Generate
-                Field</button>
-            <button id="backToMenuButtonLevelEditor"
-                class="elementStyle fontSize23 backgroundGrey borderRad marginLeft5 marginRight5 width100 maxWidth240 marginTop5 marginBot5 pointer">Overview</button>
+        </div>
+        <div id="settingbuttons" class="editorSetting sectionRight">
+            <button id="generateLevel" class="buttonStyle">
+                Generate Field</button>
+            <button id="backToMenuButtonLevelEditor" class="buttonStyle">Overview</button>
         </div>
     </div>
-    <div id="editorView" class="flex flexRow width100 hidden">
-        <div id="editorsection" class="widthCalc50 grid maxHeight350 margin5 scrollable">
-            <div id="editor" class="justifyEnd grid grideditor">
+    <div id="editorView" class="editorSection hidden">
+        <div id="editorsection" class="editorBox">
+            <div id="editor" class="editorGrid grideditor">
             </div>
         </div>
-        <div id="editorsidebar" class="flex flexCol marginRightAuto marginLeft5 widthCalc50 minHeight320">
-            <div id="selectedAndRemove" class="flex margin5">
-                <div id="currentItemBox" class="flex flexCol margin5">
-                    <p id="labelCurrentItem" class="text margin5  textCenter">
+        <div id="editorsidebar" class="sidebarBox">
+            <div id="selectedAndRemove" class="flexBox">
+                <div id="currentItemBox" class="alignCenter">
+                    <label id="labelCurrentItem" class="text">
                         Selected Item
-                    </p>
-                    <div id="currentSelectedItem">
-                    </div>
+                    </label>
+                    <div id="currentSelectedItem" class="size50"></div>
                 </div>
-                <div id="BinBox" class="flex flexCol margin5">
-                    <p id="labelBin" class="text margin5  textCenter">
+                <div id="BinBox" class="alignCenter">
+                    <label id="labelBin" class="text">
                         Delete
-                    </p>
-                    <div id="Bin" class="recycling imageOption size50 selfCenter pointer">
-                    </div>
+                    </label>
+                    <img src='resources/assets/delete.svg' id="Bin" class="size50">
                 </div>
-                <div id="infoBox" class="flex flexCol margin5">
-                    <label id="labelInfo" class="text margin5">
+                <div id="infoBox">
+                    <label id="labelInfo" class="text">
                         Info
                     </label>
-                    <p id="info" class="editorInfo backgroundLightgrey marginLeft5 marginRight5 marginTop0 marginBot0 scrollable"></p>
+                    <p id="info" class="editorInfo">
+                    </p>
                 </div>
             </div>
-            <div id="placeableGrid" class="flex flexRow selector margin5">
-                <div id="Start" class="flex flexCol alignCenter margin5">
-                    <p id="labelStart" class="text margin5 textCenter">
+            <div id="placeableGrid" class="flexBox selector">
+                <div id="Start" class="placeableItem">
+                    <label id="labelStart" class="text">
                         Start
-                    </p>
-                    <div id="StartImg" class="path astronaut relative size50 margin5 pointer"></div>
+                    </label>
+                    <img src="resources/assets/Astronaut.svg" id="StartImg" class="backgroundGreen editorItem">
                 </div>
-                <div id="Goal" class="flex flexCol alignCenter margin5">
-                    <p id="labelGoal" class="text margin5 textCenter">
+                <div id="Goal" class="placeableItem">
+                    <label id="labelGoal" class="text">
                         Goal
-                    </p>
-                    <div id="GoalImg" class="goal_unlocked size50 margin5 pointer"></div>
+                    </label>
+                    <img src="resources/assets/ziel_open.svg" id="GoalImg" class="editorItem">
                 </div>
-                <div id="Wall" class="flex flexCol alignCenter margin5">
-                    <p id="labelWall" class="text margin5 textCenter">
+                <div id="Wall" class="placeableItem">
+                    <label id="labelWall" class="text">
                         Wall
-                    </p>
-                    <div id="WallImg" class="wall size50 margin5 pointer"></div>
+                    </label>
+                    <img src="resources/assets/wall.svg" id="WallImg" class="editorItem">
                 </div>
-                <div id="Path" class="flex flexCol alignCenter margin5">
-                    <p id="labelPath" class="text margin5 textCenter">
-                        Path
-                    </p>
-                    <div id="PathImg" class="path size50 margin5 pointer"></div>
-                </div>
-                <div id="Abyss" class="flex flexCol alignCenter margin5">
-                    <p id="labelAbyss" class="text margin5 textCenter">
+                <div id="Abyss" class="placeableItem">
+                    <label id="labelAbyss" class="text">
                         Abyss
+                    </label>
+                    <div id="AbyssImg" class="editorAbyss"></div>
+                </div>
+                <div id="Check" class="placeableItem">
+                    <p id="labelCheckpoint" class="text">
+                        Checkpoint
                     </p>
-                    <div id="AbyssImg" class="blackHalfOpacity size50 margin5  pointer"></div>
+                    <div id="CheckpointImg" class="backgroundGreen size50"></div>
                 </div>
             </div>
-
-            <div id="dropDownPlaceable" class="maxWidth700 flex margin5 hidden">
-                <div id="Laserfield"
-                    class="elementStyle fontSize23 backgroundGrey borderRad width100 marginLeft5 zindex5 flex flexRow alignCenter relative">
-                    <label id="laserfieldLabel" class="marginRight5">Laserfield:
+            <div id="dropDownPlaceable" class="flexBox hidden">
+                <div id="Laserfield" class="buttonStyle dropdownBox">
+                    <label id="laserfieldLabel" class="text">Laserfield:
                     </label>
-                    <div id="laserfieldSelect" class="size40"></div>
-                    <div id="laserfieldDropdown"
-                        class="selector flex flexRow backgroundGrey borderTopNoRad paddingBot5 alignCenter borderBox borderGrey absolut top100 hidden">
+                    <img src="resources/assets/laserfield/Laserfield_Bottom.svg" id="laserfieldSelect" class="size40">
+                    <div id="laserfieldDropdown" class="dropdown selector hidden">
                     </div>
                 </div>
-                <div id="Airvent"
-                    class="elementStyle fontSize23  backgroundGrey borderRad width100 zindex5 flex flexRow marginLeft5 alignCenter relative">
-                    <label id="airventLabel" class="marginRight5">
+                <div id="Airvent" class="buttonStyle dropdownBox">
+                    <label id="airventLabel" class="text">
                         Airvent:
                     </label>
-                    <div id="airventSelect" class="size40"></div>
-                    <div id="airventDropdown"
-                        class="selector borderTopNoRad width100 flex flexRow zindex5 backgroundGrey paddingBot5 alignCenter borderBox borderGrey absolut top100 hidden">
-                    </div>
-                    <label id="airstreamLabel" for="airstream"
-                        class="flex alignCenter elementStyle fontSize23 backgroundGrey borderTopNoRad paddingBot5 width100  hidden absolut top100 ">
-                        Stream strenght:
-                        <input id="airstream" class="editorInput textCenter marginLeft5" type="number" min="0.5" max="2.0" step="0.1"
+                    <img src="resources/assets/airstream/Airvent_Bottom.svg" id="airventSelect" class="size40">
+                    <div id="airstreamBox" class="dropdown hidden">
+                        <label id="airstreamLabel" for="airstream" class="text">
+                            Stream strenght:
+                        </label><input id="airstream" class="editorInput" type="number" min="0.5" max="2.0" step="0.1"
                             value="1">
-                    </label>
+                    </div>
+                    <div id="airventDropdown" class="dropdown selector hidden">
+                    </div>
                 </div>
             </div>
-            <div id="traps" class="maxWidth700 flex flexRow selector heigh4EM margin5 hidden">
-                <div id="Lasergate" class="flex flexCol alignCenter">
-                    <p id="labelLasergate" class="text margin5 textCenter">
+            <div id="traps" class="flexBox hidden">
+                <div id="Lasergate" class="placeableItem">
+                    <label id="labelLasergate" class="text">
                         Lasergate
-                    </p>
-                    <div id="LasergateImg" class="lasergateHorizontal imageOption size50 margin5 pointer"></div>
+                    </label>
+                    <img src="resources/assets/Lasergate_Horizontal.png" id="LasergateImg" class="editorItem">
                 </div>
-                <div id="lasergateSettings" class="flex flexCol alignCenter hidden minWidth380 ">
-                    <label id="onTime" for="on"
-                        class="elementStyle fontSize23 borderBotNoRad backgroundGrey width80 alignCenter flex flexRow">
-                        On Time:
-                        <input id="on" class="editorInput textCenter flex flexRow alignCenter" type="number" min="1000" max="10000"
-                            step="500" value="2000">
-                    </label>
-                    <label id="offTime" for="off"
-                        class="elementStyle fontSize23 borderTopNoRad backgroundGrey width80 alignCenter flex flexRow">
-                        Off Time:
-                        <input id="off" class="editorInput textCenter flex flexRow alignCenter" type="number" min="2000"
-                            max="10000" step="500" value="3000">
-                    </label>
+                <div id="lasergateSettings" class="lasergateSetting buttonStyle hidden">
+                    <div id='onBox' class="editorSection">
+                        <label id="onTime" for="on" class="text">
+                            On Time:
+                        </label>
+                        <input id="on" class="editorInput" type="number" min="1000" max="10000" step="100" value="2000">
+                    </div>
+                    <div id="offBox" class="editorSection">
+                        <label id="offTime" for="off" class="text">
+                            Off Time:
+                        </label>
+                        <input id="off" class="editorInput" type="number" min="2000" max="10000" step="100"
+                            value="3000">
+                    </div>
                 </div>
             </div>
 
-            <div id="placeableItems" class="maxWidth700 flex hidden">
-                <div id="absolutItems" class="flex flexRow alignCenter width50 selector">
-                    <div id="Key" class="flex flexCol alignCenter margin5">
-                        <p id="labelKey" class="text margin5 textCenter">
+            <div id="placeableItems" class="flexBox hidden">
+                <div id="absolutItems" class="flexBox selector">
+                    <div id="Key" class="placeableItem">
+                        <label id="labelKey" class="text">
                             Key
-                        </p>
-                        <div id="KeyImg" class="key imageOption size50 relative pointer"></div>
+                        </label>
+                        <img src="resources/assets/Key.svg" id="KeyImg" class="editorItem">
                     </div>
-                    <div id="Life" class="flex flexCol alignCenter margin5">
-                        <p id="labelLife" class="text margin5 textCenter">
+                    <div id="Life" class="placeableItem">
+                        <label id="labelLife" class="text">
                             Life
-                        </p>
-                        <div id="LifeImg" class="life flexCol imageOption size50 relative pointer"></div>
+                        </label>
+                        <img src="resources/assets/extralife.svg" id="LifeImg" class="editorItem">
                     </div>
-                    <div id="Invert" class="flex flexCol alignCenter margin5">
-                        <p id="labelInvert" class="text margin5 textCenter">
+                    <div id="Invert" class="placeableItem">
+                        <label id="labelInvert" class="text">
                             Invert
-                        </p>
-                        <div id="InvertImg" class="invert imageOption size50 relative pointer"></div>
+                        </label>
+                        <img src="resources/assets/Invert_Control.svg" id="InvertImg" class="editorItem">
                     </div>
-                    <div id="Speed-Up" class="flex flexCol alignCenter margin5">
-                        <p id="labelSpeed-Up" class="text margin5 textCenter">
-                            SpeedUp
-                        </p>
-                        <div id="Speed-UpImg" class="speedUp imageOption size50 relative pointer "></div>
-                    </div>
-                    <div id="Speed-Down" class="flex flexCol alignCenter margin5">
-                        <p id="labelSpeed-Down" class="text margin5 textCenter">
-                            Speed<br>Down
-                        </p>
-                        <div id="Speed-DownImg" class="speedDown imageOption size50 relative pointer"></div>
-                    </div>
-                    <div id="Visibility-Up" class="flex flexCol alignCenter margin5">
-                        <p id="labelVisibility-Up" class="text margin5 textCenter">
+                    <div id="Visibility-Up" class="placeableItem">
+                        <label id="labelVisibility-Up" class="text">
                             ViewUp
-                        </p>
-                        <div id="Visibility-UpImg" class="visibilityUp imageOption size50 relative pointer "></div>
+                        </label>
+                        <img src="resources/assets/bigger_viewfield.svg" id="Visibility-UpImg" class="editorItem">
                     </div>
-                    <div id="Visibility-Down" class="flex flexCol alignCenter margin5">
-                        <p id="labelVisibility-DownImg" class="text margin5 textCenter">
-                            View<br>Down
-                        </p>
-                        <div id="Visibility-DownImg" class="visibilityDown imageOption size50 relative pointer">
-                        </div>
+                    <div id="Visibility-Down" class="placeableItem">
+                        <label id="labelVisibility-DownImg" class="text">
+                            ViewDown
+                        </label>
+                        <img src="resources/assets/smaller_viewfield.svg" id="Visibility-DownImg" class="editorItem">
+                    </div>
+                    <div id="Speed-Up" class="placeableItem">
+                        <label id="labelSpeed-Up" class="text">
+                            SpeedUp
+                        </label>
+                        <img src="resources/assets/fast.svg" id="Speed-UpImg" class="editorItem">
+                    </div>
+                    <div id="Speed-Down" class="placeableItem">
+                        <label id="labelSpeed-Down" class="text">
+                            SpeedDown
+                        </label>
+                        <img src="resources/assets/slow.svg" id="Speed-DownImg" class="editorItem">
                     </div>
                 </div>
-                <div id="powerUps" class="flex flexCol width50">
-                    <div id="durationBox"
-                        class="flex elementStyle fontSize23 backgroundGrey alignCenter borderRad width80 marginLeft5 marginTop5 marginRight5 hidden">
-                        <label id="durationLabel" for="duration" class="text margin5 textCenter">Duration:</label>
-                        <input id="duration" class="editorInput textCenter flex flexRow alignCenter" type="number" min="1000"
-                            max="10000" step="500" value="3000">
+
+            </div>
+            <div id="powerUps" class="placeableItem hidden">
+                <div id="powerUpBox" class="buttonStyle powerupSetting ">
+                    <div id="durationBox" class="editorSection">
+                        <label id="durationLabel" for="duration" class="text">Duration:</label>
+                        <input id="duration" class="editorInput" type="number" min="1000" max="10000" step="100"
+                            value="3000">
                     </div>
-                    <div id="valueBox"
-                        class="flex elementStyle fontSize23 backgroundGrey alignCenter borderTopNoRad width80 marginLeft5 marginRight5 marginBot5 hidden">
-                        <label id="valueLabel" for="valueInput" class="text margin5 textCenter"></label>
-                        <input id="valueInput" class="editorInput textCenter flex flexRow alignCenter" type="number" min="2"
-                            max="10" step="1" value="5">
+                    <div id="valueBox" class="editorSection hidden">
+                        <label id="valueLabel" for="valueInput" class="text"></label>
+                        <input id="valueInput" class="editorInput" type="number" min="2" max="10" step="1" value="5">
                     </div>
                 </div>
             </div>
-            <div id="MonsterSection" class="flex hidden">
-                <div id="Monster" class="flex flexRow selector ">
-                    <div id="Runner" class="flex flexCol alignCenter margin5">
-                        <label id="labelRunner" class="text margin5 textCenter">
+            <div id="MonsterSection" class="flexbox hidden">
+                <div id="Monster" class="monsterBox selector">
+                    <div id="Runner" class="placeableItem">
+                        <label id="labelRunner" class="text">
                             Runner
                         </label>
-                        <div id="RunnerImg" class="runner imageOption size50 relative pointer"></div>
+                        <img src="resources/assets/monster_runner.svg" id="RunnerImg" class="size50">
                     </div>
-                    <div id="Patroler" class="flex flexCol alignCenter margin5">
-                        <label id="labelPatroler" class="text margin5 textCenter">
+                    <div id="Patroler" class="placeableItem">
+                        <label id="labelPatroler" class="text">
                             Patroler
                         </label>
-                        <div id="PatrolerImg" class="patroler imageOption size50 relative pointer"></div>
+                        <img src="resources/assets/monster_patroler.svg" id="PatrolerImg" class="size50">
                     </div>
                 </div>
-                <button id="PatrolSubmit" class="elementStyle fontSize23 backgroundGrey borderRad width50 margin5 selfCenter pointer">Submit Patroler</button>
+                <button id="PatrolSubmit" class="buttonStyle monsterSubmitWidth">Submit
+                    Patroler</button>
             </div>
         </div>
     </div>
-    <div id="editorbutton" class="flex flexRow alignCenter margin5 hidden">
-        <button id="stateBack" class="elementStyle fontSize23 backgroundGrey borderRad width240 margin5 hidden pointer">Back</button>
-        <button id="save" class="elementStyle fontSize23 backgroundGrey borderRad width240 margin5 pointer"></button>
-        <pre id="jsonOutput" class="flex backgroundLightgrey widthCalc50 maxHeight350 absolut zindex5 scrollable hidden"></pre>
-        <button id="jsonGenerate" class="elementStyle fontSize23 backgroundGrey borderRad width240 margin5 hidden pointer"></button>
-        <button id="jsonCopy" class="elementStyle fontSize23 backgroundGrey borderRad width240 margin5 hidden pointer">Copy JSON</button>
+    <div id="editorbutton" class="editorSection hidden">
+        <button id="stateBack" class="buttonStyle menuButtonWidth hidden">Back</button>
+        <button id="save" class="buttonStyle menuButtonWidth "></button>
+        <pre id="jsonOutput" class="editorOut hidden"></pre>
+        <button id="jsonGenerate" class="buttonStyle menuButtonWidth hidden"></button>
+        <button id="jsonCopy" class="buttonStyle menuButtonWidth hidden">Copy
+            JSON</button>
     </div>
 </div>
