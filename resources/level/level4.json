@@ -1,4 +1,3 @@
-
 {
     "Level":[
         [
@@ -29,7 +28,7 @@
             "Path",
             "Path",
             "Path",
-            "Path"
+            "LF-l"
         ],
         [
             "Wall",
@@ -42,9 +41,39 @@
             "Path",
             "Path",
             "Path",
+            "Wall",
+            "Path",
+            "LF-l"
+        ],
+        [
+            "Wall",
+            "Abyss",
+            "Path",
+            "Abyss",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Path",
+            "LF-l"
+        ],
+        [
+            "Wall",
+            "Abyss",
+            "Path",
+            "Abyss",
+            "Wall",
+            "Abyss",
+            "Abyss",
+            "Abyss",
             "LF-r",
             "Path",
-            "Path"
+            "Path",
+            "Path",
+            "LF-l"
         ],
         [
             "Wall",
@@ -52,43 +81,13 @@
             "Path",
             "Abyss",
             "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "LF-r",
-            "Path",
-            "Path"
-        ],
-        [
-            "Wall",
             "Abyss",
-            "Path",
-            "Abyss",
-            "Wall",
-            "Path",
             "Goal",
-            "Path",
-            "Wall",
-            "Path",
-            "Path",
-            "Path",
-            "Path"
-        ],
-        [
-            "Wall",
             "Abyss",
-            "Path",
-            "Abyss",
-            "Wall",
-            "Path",
-            "Path",
+            "LF-r",
             "Path",
             "Wall",
-            "Path",
-            "LF-b",
-            "LF-b",
+            "Wall",
             "Wall"
         ],
         [
@@ -97,29 +96,29 @@
             "Path",
             "Abyss",
             "Wall",
-            "Wall",
+            "Abyss",
             "Path",
-            "Wall",
-            "Wall",
+            "Abyss",
+            "LF-r",
             "Path",
             "Path",
             "Path",
-            "Wall"
+            "LF-l"
         ],
         [
             "Wall",
             "Abyss",
             "Path",
             "Abyss",
-            "Path",
-            "Path",
-            "Path",
+            "Wall",
+            "Wall",
             "Path",
             "LF-b",
             "LF-b",
             "LF-b",
+            "LF-b",
             "Path",
-            "Wall"
+            "LF-l"
         ],
         [
             "Wall",
@@ -127,14 +126,14 @@
             "Path",
             "Path",
             "Path",
-            "Wall",
             "Path",
             "Path",
             "Path",
             "Path",
             "Path",
             "Path",
-            "Wall"
+            "Path",
+            "LF-l"
         ],
         [
             "Wall",
@@ -160,22 +159,42 @@
         "Runner":[
             [
                 {
+                    "x":3.6,
+                    "y":0.5
+                },
+                {
+                    "x":3.6,
+                    "y":9.5
+                }
+            ],
+            [
+                {
                     "x":0.5,
-                    "y":3.9
+                    "y":3.7
                 },
                 {
                     "x":4.5,
-                    "y":3.9
+                    "y":3.7
                 }
             ],
             [
                 {
                     "x":4.5,
-                    "y":6.1
+                    "y":5.7
                 },
                 {
                     "x":0.5,
-                    "y":6.1
+                    "y":5.7
+                }
+            ],
+            [
+                {
+                    "x":0.5,
+                    "y":6.7
+                },
+                {
+                    "x":4.5,
+                    "y":6.7
                 }
             ]
         ]

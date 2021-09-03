@@ -92,10 +92,8 @@ html, body {
 }
 
 .wall {
-    background-image: url("resources/assets/wall.svg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center center;
+    position: relative;
+    z-index: 3;
 }
 
 .path {
@@ -178,6 +176,7 @@ html, body {
     background-size: 100% auto;
     background-position: center center;
     position: absolute;
+    z-index: 2;
 }
 
 .patroler {
@@ -187,6 +186,7 @@ html, body {
     background-size: 100% auto;
     background-position: center center;
     position: absolute;
+    z-index: 2;
 }
 
 .lasergateHorizontal {
@@ -195,6 +195,7 @@ html, body {
     background-size: 100% 100%;
     background-position: center center;
     position: absolute;
+    z-index: 1;
 }
 
 .lasergateVertical {
@@ -203,6 +204,7 @@ html, body {
     background-size: 100% 100%;
     background-position: center center;
     position: absolute;
+    z-index: 1;
 }
 
 .leveltext {
@@ -228,6 +230,10 @@ html, body {
 
 #pauseMenu button {
     width: 95% !important;
+}
+
+#viewfield {
+    z-index: 5;
 }
 
 .viewblock {
@@ -618,9 +624,6 @@ html, body {
     position: absolute;
 }
 
-.zindex5 {
-    z-index: 5;
-}
 
 .text {
     font-size: 20px;
