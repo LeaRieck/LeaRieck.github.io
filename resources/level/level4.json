@@ -1,3 +1,4 @@
+
 {
     "Level":[
         [
@@ -28,7 +29,7 @@
             "Path",
             "Path",
             "Path",
-            "LF-l"
+            "Path"
         ],
         [
             "Wall",
@@ -41,39 +42,9 @@
             "Path",
             "Path",
             "Path",
-            "Wall",
-            "Path",
-            "LF-l"
-        ],
-        [
-            "Wall",
-            "Abyss",
-            "Path",
-            "Abyss",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Wall",
-            "Path",
-            "LF-l"
-        ],
-        [
-            "Wall",
-            "Abyss",
-            "Path",
-            "Abyss",
-            "Wall",
-            "Abyss",
-            "Abyss",
-            "Abyss",
             "LF-r",
             "Path",
-            "Path",
-            "Path",
-            "LF-l"
+            "Path"
         ],
         [
             "Wall",
@@ -81,13 +52,43 @@
             "Path",
             "Abyss",
             "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "Wall",
+            "LF-r",
+            "Path",
+            "Path"
+        ],
+        [
+            "Wall",
             "Abyss",
+            "Path",
+            "Abyss",
+            "Wall",
+            "Path",
             "Goal",
-            "Abyss",
-            "LF-r",
             "Path",
             "Wall",
+            "Path",
+            "Path",
+            "Path",
+            "Path"
+        ],
+        [
             "Wall",
+            "Abyss",
+            "Path",
+            "Abyss",
+            "Wall",
+            "Path",
+            "Path",
+            "Path",
+            "Wall",
+            "Path",
+            "LF-b",
+            "LF-b",
             "Wall"
         ],
         [
@@ -96,29 +97,29 @@
             "Path",
             "Abyss",
             "Wall",
-            "Abyss",
+            "Wall",
             "Path",
-            "Abyss",
-            "LF-r",
+            "Wall",
+            "Wall",
             "Path",
             "Path",
             "Path",
-            "LF-l"
+            "Wall"
         ],
         [
             "Wall",
             "Abyss",
             "Path",
             "Abyss",
-            "Wall",
-            "Wall",
+            "Path",
+            "Path",
+            "Path",
             "Path",
             "LF-b",
             "LF-b",
             "LF-b",
-            "LF-b",
             "Path",
-            "LF-l"
+            "Wall"
         ],
         [
             "Wall",
@@ -126,14 +127,14 @@
             "Path",
             "Path",
             "Path",
+            "Wall",
             "Path",
             "Path",
             "Path",
             "Path",
             "Path",
             "Path",
-            "Path",
-            "LF-l"
+            "Wall"
         ],
         [
             "Wall",
@@ -159,42 +160,22 @@
         "Runner":[
             [
                 {
-                    "x":3.6,
-                    "y":0.5
-                },
-                {
-                    "x":3.6,
-                    "y":9.5
-                }
-            ],
-            [
-                {
                     "x":0.5,
-                    "y":3.7
+                    "y":3.9
                 },
                 {
                     "x":4.5,
-                    "y":3.7
+                    "y":3.9
                 }
             ],
             [
                 {
                     "x":4.5,
-                    "y":5.7
+                    "y":6.1
                 },
                 {
                     "x":0.5,
-                    "y":5.7
-                }
-            ],
-            [
-                {
-                    "x":0.5,
-                    "y":6.7
-                },
-                {
-                    "x":4.5,
-                    "y":6.7
+                    "y":6.1
                 }
             ]
         ]

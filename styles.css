@@ -5,9 +5,32 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
     overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
 
+h1{
+    font-size: 64px;
+    text-shadow: 10px 10px 10px #000000;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -100px;
+}
+
+h2{
+    color: white;
+    font-size: x-large;
+    text-shadow: 10px 10px 10px #000000;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: -2;
+    left: calc(50% + 40px);
 }
 
 .camera {
@@ -32,7 +55,13 @@ html, body {
     background-repeat: no-repeat;
 }
 
-.gridfield {
+.gradient{
+    background-image: radial-gradient(closest-side, transparent, rgba(0,0,0,0.8) 100%),url("resources/background/background.png");
+    z-index: -5;
+    position: relative;
+}
+
+.field {
     display: grid;
     position: absolute;
 }
@@ -49,15 +78,29 @@ html, body {
 
 .buttonStyle {
     font-size: 23px;
-    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     text-align: center;
     background-color: #414141;
     color: white;
-    border: none;
     margin: 5px;
     border-radius: 28px;
     min-height: 2em;
     cursor: pointer;
+    box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.8);
+    background:linear-gradient(to bottom, #535353 5%, #414141 100%);
+    border:1px solid #414141;
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #414141 5%, #535353 100%);
+	background-color:#535353;
+}
+
+button:active {
+	position:relative;
+	top:1px;
 }
   
 .menuButtonWidth {
@@ -74,6 +117,13 @@ html, body {
 
 .repeat {
     background-repeat: repeat;
+}
+
+.fieldborder{
+    border: 3px  solid #5f676f;
+    box-sizing: border-box ;
+    z-index: 2;
+    background-color: transparent;
 }
 
 .gridentity {
@@ -209,7 +259,9 @@ html, body {
 
 .leveltext {
     font-size: 23px;
-    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     text-align: center;
     align-items: center;
     color: white;
@@ -218,7 +270,9 @@ html, body {
 
 .timetext {
     font-size: 10px;
-    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     text-align: center;
     color: white;
     margin: 0;
@@ -332,6 +386,9 @@ html, body {
     border-top: 1px solid black;
     border-right: 1px solid black;
     font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     height: 55px;
     align-items: center;
 }
@@ -377,14 +434,19 @@ html, body {
     cursor: pointer;
 }
 
-.editorOverview {
-    max-width: 60%;
-    margin: 0 auto;
-    gap: 15px;
-}
-
 .customJsonLabel{
     cursor: pointer;
+}
+
+.customButton:active{
+    position: relative;
+    top: 1px;
+
+}
+.customButton:hover {
+    -webkit-tap-highlight-color: transparent;
+	background:linear-gradient(to bottom, #414141 5%, #535353 100%);
+	background-color:#535353;
 }
 
 .customOutBox {
@@ -502,6 +564,9 @@ html, body {
 
 .editorInfo {
     font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     max-width: 300px;
     max-height: 50px;
     background-color: lightgrey;
@@ -597,6 +662,7 @@ html, body {
     text-align: center;
     text-shadow: 0 0 8px black;
     font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     cursor: default;
 }
@@ -627,6 +693,9 @@ html, body {
 
 .text {
     font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     padding: 0 2px 0 2px;
     color: white;
     margin: 5px;
